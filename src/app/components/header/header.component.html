@@ -1,0 +1,48 @@
+<mat-toolbar class="max-w-7xl 
+                    mx-auto border-x
+                    justify-between"
+                    >
+    <a routerLink="home">Codigo con Joe </a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon
+         [matBadge]="1"
+         matBadgeColor="warn"      
+         >shopping_cart </mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <div class="p-3 divide-y divide-solid">
+              <div class="pb-3 flex justify-between">
+                <span class="mr-16"> 1 items</span>
+                <a routerLink="cart">Ver Carrito </a>
+              </div>
+              
+              <div class="py-3">
+                <div class="flex justify-between font-light mb-2">
+                    keyboard x 1
+                    <span class="font-bold"> {{ '100' | currency }} </span>
+                </div>
+                <div class="flex justify-between font-light mb-2">
+                    keyboard x 1
+                    <span class="font-bold"> {{ '200' | currency }} </span>
+                </div>
+
+                <div class="flex justify-between font-light mb-2">
+                    keyboard x 1
+                    <span class="font-bold"> {{ '300' | currency }} </span>
+                </div>
+
+                <div class="flex justify-between py-3 font-light">
+                    total :
+                    <span class="font-bold">{{ '600' | currency  }}</span>
+                </div>
+
+              </div>
+
+
+        </div>
+
+    </mat-menu>
+
+
+</mat-toolbar>
